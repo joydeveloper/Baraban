@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <meta content="KEYWORDS 3-7" name="keywords" />
+    <meta content="DESCRIPTION 5-20" name="description" />
+    <meta name="theme-color" content="#fff" />
+    <style>
+   
+    </style>
+    <script src="app.js"></script>
+    <script src="readers.js"></script>
+    <script src="debugutils.js"></script>
+    <script src="utils.js"></script>
+ 
+</head>
+<body>
+        
+    <header><h1>BarabanJS</h1></header>
+    <nav>
+
+
+
+
+    </nav>
+    <section>
+        <div id='mainscene'></div>
+        <script>
+                let appconfig = {
+            name: 'BarabanJS',
+            screenMode:'auto',
+            linux:'linux.css', 
+            windows:'windows.css', 
+            mac:'mac.css', 
+            android:'android.css',
+            iphone:'iphone.css', 
+            ipad:'ipad.css',
+             default:'default.css',
+            };
+                var app = new AppX(appconfig);
+                app.Setup();
+            </script>
+    </section>
+    <article></article>
+    <aside></aside>
+    <footer></footer>
+ 
+</body>
+
+</html>
