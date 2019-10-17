@@ -7,14 +7,14 @@
     <meta content="KEYWORDS 3-7" name="keywords" />
     <meta content="DESCRIPTION 5-20" name="description" />
     <meta name="theme-color" content="#fff" />
-    <style>
-   
-    </style>
+    <link href="adaptive.css" rel="stylesheet">
     <script src="app.js"></script>
     <script src="readers.js"></script>
     <script src="debugutils.js"></script>
     <script src="utils.js"></script>
     <script src="startup.js"></script>
+    <style>
+    </style>
 </head>
 <body>
     <header><h1>BarabanJS</h1></header>
@@ -23,8 +23,8 @@
     <section>
         <div id='mainscene'></div>
         <script>
-loadScript('startup.js',script => {app.Start()});
-            </script>
+            loadScript('startup.js', script => { app.Start() });
+        </script>
     </section>
     <article></article>
     <aside></aside>
