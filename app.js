@@ -7,16 +7,21 @@ const IPHONE=4;
 const IPAD=5;
 
 class AppX{
+  
   constructor(appconfig) {
     this.appconfig = appconfig;
-    window.addEventListener("load",this.Start);
+   
   }
   Setup(){
-    document.title = appconfig.name;
+    document.title = appconfig.title;
     this.AppendMainCss(this.GetDevice());
+    window.addEventListener("load",this.GetOrientation);
+    window.addEventListener("resize",this.GetOrientation);
+    
+    //callback(this.Start())
   }
   Start() {
-  consolelog(null,'appstart');
+  
   }
   Stop(){
 
@@ -68,8 +73,33 @@ AppendMainCss(devicenumber){
                 loadCss(this.appconfig.ipad)
                 break;
     default:
-      loadCss('default.css')
+    loadCss(this.appconfig.default)
   }
+}
+GetOrientation()
+{
+ 
+  let currentorientation="";
+  switch(window.orientation) {
+      case 0:
+        currentorientation = 'P';
+          break;
+
+      case -90:
+        currentorientation = 'L';
+          break;
+
+      case 90:
+        currentorientation = 'L';
+          break;
+
+      case 180:
+        currentorientation = 'P';
+          break;
+  }
+
+  return currentorientation;
+
 }
 };
 
