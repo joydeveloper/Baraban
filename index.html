@@ -8,12 +8,15 @@
     <meta content="DESCRIPTION 5-20" name="description" />
     <meta name="theme-color" content="#fff" />
     <link href="css/adaptive.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
     <script src="barabanjs/core/app.js"></script>
     <script src="barabanjs/utils/readers.js"></script>
     <script src="barabanjs/utils/debugutils.js"></script>
     <script src="barabanjs/utils/utils.js"></script>
     <script src="barabanjs/utils/cookie.js"></script>
     <script src="barabanjs/core/startup.js"></script>
+    <script src="barabanjs/core/elementfactory.js"></script>
+    <script src="barabanjs/core/privatebuilder.js"></script>
     <style>
     </style>
 </head>
@@ -27,7 +30,12 @@
         <div id='mainscene'></div>
         <script>
             loadScript('barabanjs/core/startup.js', script => { app.Start() });
-       
+           let tstbtn= BuildElement('BUTTON','mainscene');
+           let navitems=['Главная','О нас','Инфо'];
+           CreateUL(navitems,'first');
+           AddText(tstbtn,"test");
+           ParentSet(navitems,'mainscene');
+           
         </script>
     </section>
     <article></article>
