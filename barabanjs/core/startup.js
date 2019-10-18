@@ -1,6 +1,7 @@
 
 let appconfig = {
     title: 'BarabanJS',
+    apptype:'htmlset',
     screenMode: 'auto',
     linux: 'css/devices/linux.css',
     windows: 'css/devices/windows.css',
