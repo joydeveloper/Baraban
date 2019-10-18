@@ -7,23 +7,27 @@
     <meta content="KEYWORDS 3-7" name="keywords" />
     <meta content="DESCRIPTION 5-20" name="description" />
     <meta name="theme-color" content="#fff" />
-    <link href="adaptive.css" rel="stylesheet">
-    <script src="app.js"></script>
-    <script src="readers.js"></script>
-    <script src="debugutils.js"></script>
-    <script src="utils.js"></script>
-    <script src="startup.js"></script>
+    <link href="css/adaptive.css" rel="stylesheet">
+    <script src="barabanjs/core/app.js"></script>
+    <script src="barabanjs/utils/readers.js"></script>
+    <script src="barabanjs/utils/debugutils.js"></script>
+    <script src="barabanjs/utils/utils.js"></script>
+    <script src="barabanjs/utils/cookie.js"></script>
+    <script src="barabanjs/core/startup.js"></script>
     <style>
     </style>
 </head>
 <body>
     <header><h1>BarabanJS</h1></header>
     <nav>
+
     </nav>
     <section>
+   
         <div id='mainscene'></div>
         <script>
-            loadScript('startup.js', script => { app.Start() });
+            loadScript('barabanjs/core/startup.js', script => { app.Start() });
+          consolelog(null, app.isFirstStartup) ;
         </script>
     </section>
     <article></article>

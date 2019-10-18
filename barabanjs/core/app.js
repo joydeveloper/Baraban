@@ -12,6 +12,7 @@ class AppX {
         this.appconfig = appconfig;
 
     }
+    isFirstStartup=false;
     Setup() {
         document.title = appconfig.title;
         this.AppendMainCss(this.GetDevice());
@@ -21,7 +22,16 @@ class AppX {
         //callback(this.Start())
     }
     Start() {
-
+         if(this.isFirstStartup==false)
+         {
+           var expires = 60 * 60 * 24;
+           setCookie('user','visitor', { expires });
+          
+         }
+         else
+         {
+           getCookie('user');
+         }
     }
     Stop() {
 
@@ -29,6 +39,7 @@ class AppX {
     Restart() {
 
     }
+
     GetDevice() {
         let userstring = navigator.userAgent;
         let devicenumber = -1;

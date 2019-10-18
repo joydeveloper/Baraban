@@ -2,13 +2,13 @@
 let appconfig = {
     title: 'BarabanJS',
     screenMode: 'auto',
-    linux: 'linux.css',
-    windows: 'windows.css',
-    mac: 'mac.css',
-    android: 'android.css',
-    iphone: 'iphone.css',
-    ipad: 'ipad.css',
-    default: 'default.css'
+    linux: 'css/devices/linux.css',
+    windows: 'css/devices/windows.css',
+    mac: 'css/devices/mac.css',
+    android: 'css/devices/android.css',
+    iphone: 'css/devices/iphone.css',
+    ipad: 'css/devices/ipad.css',
+    default: 'css/devices/default.css'
 };
 var app = new AppX(appconfig);
 app.Setup();
