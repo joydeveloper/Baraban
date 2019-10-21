@@ -7,12 +7,10 @@ const IPHONE = 4;
 const IPAD = 5;
 
 class AppX {
-
     constructor(appconfig) {
         this.appconfig = appconfig;
-
     }
-    isFirstStartup=false;
+    isFirstStartup = false;
     Setup() {
         document.title = appconfig.title;
         this.AppendMainCss(this.GetDevice());
@@ -22,35 +20,35 @@ class AppX {
     }
     Start() {
         let htmlsetconfig = {
-            nav: ['Главная','Инфо','О нас'],
-            navhref:['pages/start.html','pages/info.html','pages/about.html'],
-            
+            nav: ['Главная', 'Инфо', 'О нас'],
+            navhref: ['pages/start.html', 'pages/info.html', 'pages/about.html'],
+
         };
-    
-        switch(this.appconfig.apptype)
-        {
-         case 'htmlset':{
-           
-              var apptype=new HTMLSet(htmlsetconfig);
-              apptype.BuildNav();
-         }
-         case 'cms':{
+        switch (this.appconfig.apptype) {
+            case 'htmlset': {
 
-         }
-         case 'canvas':{
+                var apptype = new HTMLSet(htmlsetconfig);
+                apptype.BuildNav();
+            }
+                break;
+            case 'cms': {
+                console.log();
+            }
+                break;
+            case 'canvas': {
+                console.log();
+            }
+                break;
+            case '3d': {
+                console.log();
+            }
+                break;
+            default: {
+                console.log();
 
-         }
-case '3d':{
-
-}
-default:{
-    
-
-    
-}
-
+            }
+                break;
         }
-       
     }
     Stop() {
 
@@ -58,20 +56,18 @@ default:{
     Restart() {
 
     }
-    DefaultAppSetup(){
+    DefaultAppSetup() {
 
 
     }
-    CookieProc(){
-        if(this.isFirstStartup==false)
-        {
-          var expires = 60 * 60 * 24;
-          setCookie('user','visitor', { expires });
-         
+    CookieProc() {
+        if (this.isFirstStartup == false) {
+            var expires = 60 * 60 * 24;
+            setCookie('user', 'visitor', { expires });
+
         }
-        else
-        {
-          getCookie('user');
+        else {
+            getCookie('user');
         }
     }
     GetDevice() {
@@ -140,5 +136,5 @@ default:{
         }
         return currentorientation;
     }
-};
+}
 
