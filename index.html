@@ -17,6 +17,7 @@
     <script src="barabanjs/core/startup.js"></script>
     <script src="barabanjs/core/elementfactory.js"></script>
     <script src="barabanjs/core/privatebuilder.js"></script>
+    <script src="barabanjs/core/htmlset.js"></script>
     <style>
     </style>
 </head>
@@ -26,16 +27,18 @@
 
     </nav>
     <section>
-   
+        <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Телефон</a></li>
+            <li><a href="#" class="text-white">Адрес</a></li>
+            <li><a href="#" class="text-white">Инстаграмм</a></li>
+            <li><a href="#" class="text-white">Вконтакте</a></li>
+        </ul>
         <div id='mainscene'></div>
         <script>
-            loadScript('barabanjs/core/startup.js', script => { app.Start() });
-           let tstbtn= BuildElement('BUTTON','mainscene');
-           let navitems=['Главная','О нас','Инфо'];
-           CreateUL(navitems,'first');
-           AddText(tstbtn,"test");
-           ParentSet(navitems,'mainscene');
-           
+        loadScript('barabanjs/core/startup.js', script => { app.Start() });
+ 
+    
+          
         </script>
     </section>
     <article></article>

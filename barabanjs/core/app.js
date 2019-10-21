@@ -19,19 +19,38 @@ class AppX {
         window.addEventListener("load", this.GetOrientation);
         window.addEventListener("resize", this.GetOrientation);
 
-        //callback(this.Start())
     }
     Start() {
-         if(this.isFirstStartup==false)
-         {
-           var expires = 60 * 60 * 24;
-           setCookie('user','visitor', { expires });
-          
+        let htmlsetconfig = {
+            nav: ['Главная','Инфо','О нас'],
+            navhref:['pages/start.html','pages/info.html','pages/about.html'],
+            
+        };
+    
+        switch(this.appconfig.apptype)
+        {
+         case 'htmlset':{
+           
+              var apptype=new HTMLSet(htmlsetconfig);
+              apptype.BuildNav();
          }
-         else
-         {
-           getCookie('user');
+         case 'cms':{
+
          }
+         case 'canvas':{
+
+         }
+case '3d':{
+
+}
+default:{
+    
+
+    
+}
+
+        }
+       
     }
     Stop() {
 
@@ -39,7 +58,22 @@ class AppX {
     Restart() {
 
     }
+    DefaultAppSetup(){
 
+
+    }
+    CookieProc(){
+        if(this.isFirstStartup==false)
+        {
+          var expires = 60 * 60 * 24;
+          setCookie('user','visitor', { expires });
+         
+        }
+        else
+        {
+          getCookie('user');
+        }
+    }
     GetDevice() {
         let userstring = navigator.userAgent;
         let devicenumber = -1;

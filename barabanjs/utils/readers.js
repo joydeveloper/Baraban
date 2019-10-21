@@ -9,3 +9,13 @@ function readJSONFile(file, callback) {
     }
     rawFile.send(null);
 };
+function LoadDoc(elementid, documentname) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById(elementid).innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", documentname, true);
+    xhttp.send();
+};

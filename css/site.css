@@ -1,11 +1,11 @@
 h5 {
     text-align: center;
 }
-.first  {
+.navul  {
     list-style: none;
     padding: 0;
     }
-    .first li {
+    .navul li {
     padding: 10px 30px;
     background: linear-gradient(to left, #f8ab8d 0%, white, #f8ab8d);
     border-bottom: 1px solid grey;
@@ -14,4 +14,13 @@ h5 {
     box-shadow: 0 5px 5px 0 rgba(0,0,0, .2);
     margin-bottom: 5px;
     }
-    .first li:last-child {border-bottom: none;}
+    .navul li:last-child {border-bottom: none;}
+    A:link { 
+        text-decoration: none; /* Убирает подчеркивание для ссылок */
+       } 
+       A:visited { text-decoration: none; } 
+       A:active { text-decoration: none; }
+       A:hover {
+        text-decoration: underline; /* Делает ссылку подчеркнутой при наведении на нее курсора */
+        color: red; /* Цвет ссылки */
+       }
