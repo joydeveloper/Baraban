@@ -16,12 +16,11 @@ class AppX {
         this.AppendMainCss(this.GetDevice());
         window.addEventListener("load", this.GetOrientation);
         window.addEventListener("resize", this.GetOrientation);
-
     }
     Start() {
         let htmlsetconfig = {
-            nav: ['Главная', 'Инфо', 'О нас'],
-            navhref: ['pages/start.html', 'pages/info.html', 'pages/about.html'],
+            nav: ['Главная', 'Инфо', 'О нас','Контакты'],
+            navhref: ['index.html', 'pages/info.html', 'pages/about.html','pages/contacts.html'],
 
         };
         switch (this.appconfig.apptype) {
